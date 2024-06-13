@@ -36,7 +36,7 @@ class GroupAdapter(
         addons.forEach { addon ->
             val radioButton = RadioButton(holder.itemView.context)
             radioButton.text = addon.name
-            radioButton.setOnCheckedChangeListener { buttonView, isChecked ->
+            radioButton.setOnCheckedChangeListener { _, isChecked ->
                 if (isChecked) {
                     priceChangeListener.onPriceChange(addon.price, true)
                 } else {
